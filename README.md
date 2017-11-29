@@ -4,18 +4,18 @@ Es un mecanismo de Android para reutilizar una porción de una actividad y defin
 
 A tener en cuenta:
 
-    * Un fragmento es una combinación de una vista (layout) y una clase que encapsulta la lógica.
-    * Usando las librerías de soporte (v4/ v7...) permiten que los fragmentos sean soportados por versiones anteriores.
+* Un fragmento es una combinación de una vista (layout) y una clase que encapsulta la lógica.
+* Usando las librerías de soporte (v4/ v7...) permiten que los fragmentos sean soportados por versiones anteriores.
 
 Importantes por:
 
-    * Permiten reutilizar vistas y lógica.
-    * Permiten dar soporte a tablets.
-    * Permiten dar soporte a las distintas orientaciones de pantalla (portrait/ landscape).
+* Permiten reutilizar vistas y lógica.
+* Permiten dar soporte a tablets.
+* Permiten dar soporte a las distintas orientaciones de pantalla (portrait/ landscape).
 
 Los fragmentos se pueden utilizar de forma estática o de forma dinámica.
 
-    * Para definirlos de forma estática basta con incluirlos en el layout
+* Para definirlos de forma estática basta con incluirlos en el layout
 ```xml
 <fragment
     android:name="com.example.android.FooFragment"
@@ -23,7 +23,7 @@ Los fragmentos se pueden utilizar de forma estática o de forma dinámica.
     android:layout_width="match_parent" 
     android:layout_height="match_parent" />
 ```
-    * Para definirlos de forma dinámica debemos hacer uso de FragmentManager y de placeholders (normalmente FrameLayout)
+* Para definirlos de forma dinámica debemos hacer uso de FragmentManager y de placeholders (normalmente FrameLayout)
 ```xml
  <FrameLayout
        android:id="@+id/your_placeholder"
@@ -64,11 +64,11 @@ public override void OnCreate(Bundle savedInstanceState)
 ```
 Comunicación con los fragmentos. Existen tres formas de comunicación en los que un fragmento y una actividad pueden comunicarse.
     
-    * A través de Bundles, al crear un fragmento se le pueden asignar argumentos.
-    * A través de métodos, la actividad puede llamar a métodos de instancia de un fragmento.
-    * A través de eventos que emite el fragmento.
+* A través de Bundles, al crear un fragmento se le pueden asignar argumentos.
+* A través de métodos, la actividad puede llamar a métodos de instancia de unfragmento.
+* A través de eventos que emite el fragmento.
 
 Resumiendo:
 
-    * Las actividades pueden inicializar fragmentos con datos durante su construcción.
-    * Las actividades pueden pasar parámetros a los fragmentos a través de métodos de instancia.
+* Las actividades pueden inicializar fragmentos con datos durante su construcción.
+* Las actividades pueden pasar parámetros a los fragmentos a través de métodos de instancia.
